@@ -7,6 +7,10 @@
         "express": "*",
         "socket.io": "*",
         "socketio-file-upload": "^0.7.3"
-    }
+    },
+
+    "scripts": {
+        "start": "node index.js"
+      }
     
 }
