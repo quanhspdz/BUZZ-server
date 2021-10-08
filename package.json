@@ -1,4 +1,5 @@
-{
+{   
+    "start": "node index.js",
     "name": "server",
     "version": "0.0.1",
     "private": "true",
@@ -7,4 +8,5 @@
         "socket.io": "*",
         "socketio-file-upload": "^0.7.3"
     }
+    
 }
