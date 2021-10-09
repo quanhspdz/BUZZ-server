@@ -23,14 +23,6 @@ io.sockets.on('connection', function(socket) {
             console.log("New user: " + userName);
             socket.on('client-register-user-password', function(password) {
                 arrayPassword.push(password);
-                fs.appendFile('username.txt', '\n' + userName, (err) => {
-                    if (err) throw err;
-                    console.log('saved username');
-                });
-                fs.appendFile('password.txt', '\n' + password, (err) => {
-                    if (err) throw err;
-                    console.log('saved password');
-                });
                 //send to client: register success
                 socket.emit('server-send-register-result', {result : "0"});
             });
