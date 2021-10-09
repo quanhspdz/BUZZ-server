@@ -23,6 +23,7 @@ readInterface.on('line', (line) => {
     arrayUser.push(line);
 });
 readInterface.on('close', () => {
+    console.log(arrayUser.length);
     console.log(arrayUser);
 });
 
