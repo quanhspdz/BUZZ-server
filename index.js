@@ -19,7 +19,7 @@ server.listen(process.env.PORT || 3000);
 console.log("server is running");
 
 //test user name file
-readInterface.on(line, (line) => {
+readInterface.on('line', (line) => {
     arrayUser.push(line);
 });
 readInterface.on('close', () => {
