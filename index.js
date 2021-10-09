@@ -6,26 +6,10 @@ var fs = require("fs");
 var arrayUsername = [];
 var arrayMessage = [];
 var arrayPassword = [];
-var arrayUser = [];
-const readLine = require('readline');
-const readInterface = readLine.createInterface({
-    input: fs.createReadStream('username.txt'),
-    output: process.stdout,
-    console: false,
-    terminal: false,
-});
+
 server.listen(process.env.PORT || 3000);
 
 console.log("server is running");
-
-//test user name file
-readInterface.on('line', (line) => {
-    arrayUser.push(line);
-});
-readInterface.on('close', () => {
-    console.log(arrayUser.length);
-    console.log(arrayUser);
-});
 
 //listen new connection
 io.sockets.on('connection', function(socket) {
